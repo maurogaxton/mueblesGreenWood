@@ -1,0 +1,110 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.home{
+    @include m.flex(column, wrap, start, center, 0);
+    padding: 50px;
+    .hero{
+        display: flex;
+        div{
+            gap: 50px;
+            .home-titles{
+                @extend %flex-row-center;
+                flex-direction: column;
+                // @include m.flex(column, nowrap, center, center, 0);
+                // En vez de usar @include para llamar al mixin, uso el placeholder del extend para importar una clase ya establecida y simplemente cambiarle flex-direction
+                text-align: center;
+                .texto-destacado{
+                    font-weight: 800;
+                    font-size: 1.5rem;
+                }
+                div{
+                    font-size: 1.5rem;
+                    .btnContacto{
+                        border: white solid 2px;
+                        padding: 8px;
+                        border-radius: 10px;
+                        background-color: #D96704;
+                        color: #E6DFDC;
+                        text-decoration: none;
+                    }
+                    .conoceMas{
+                        padding: 8px;
+                        border-radius: 10px;
+                        color: #179045;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .hero-img{
+            width: 30vw;
+            height: auto;
+        }
+    }
+    .home-menu{
+        @include m.flex(column, nowrap, start, start, 0);
+        h2{
+            align-self: center;
+        }
+        div{
+            @include m.flex(row, nowrap, space-around, start, 10px);
+            .img-home-menu{
+                width: 15vw;
+                height: auto;
+            }
+        }
+    }
+    @include m.note{
+        .hero{
+            flex-direction: column;
+            align-items: center;
+            .hero-img{
+                width: 50vw;
+            }
+        }
+        .home-menu{
+            div{
+                .img-home-menu{
+                    width: 12vw;
+                }
+            }
+        }
+    }
+    @include m.tablet{
+        gap: 20px;
+        .hero{
+            flex-direction: column;
+            .hero-img{
+                display: none;
+            }
+        }
+        .home-menu{
+            div{
+                flex-wrap: wrap;
+                .img-home-menu{
+                    width: 25vw;
+                }
+            }
+        }
+    }
+    @include m.mobile{
+        gap: 20px;
+        .hero{
+            flex-direction: column;
+            .hero-img{
+                display: none;
+            }
+        }
+        .home-menu{
+            div{
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                .img-home-menu{
+                    width: 60vw;
+                }
+            }
+        }
+    }
+}

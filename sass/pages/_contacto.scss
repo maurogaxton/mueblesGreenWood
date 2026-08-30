@@ -1,0 +1,88 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.main-contacto{
+    @include m.flex(column, nowrap, start, center, 20px);
+    section{
+        iframe{
+            margin: 0 25px;
+        }
+    }
+    .form{
+        @include m.flex(column, nowrap, start, center, 10px);
+        input, textarea{
+            width: 40vw;
+        }
+        div{
+            .form-btn{
+                margin: 0 20px;
+                width: 10vw;
+                padding: 5px;
+                background-color: #179045;
+                color: #0D0D0D;
+                font-weight: 800;
+                font-size: 1.25rem;
+                border-radius: 20px;
+            }
+        }
+    }
+    @include m.note{
+        section{
+            @include m.flex(column, nowrap, start, center, 20px);
+        }
+        .form{
+            width: 70vw;
+            input, textarea{
+                width: 60vw;
+            }
+            div{
+                .form-btn{
+                    width: 30vw;
+                }
+            }
+        }
+    }
+    @include m.tablet{
+        section{
+            @include m.flex(column, nowrap, start, center, 20px);
+            order: 2;
+        }
+        .form{
+            order: 1;
+            width: 80vw;
+            input, textarea{
+                width: 75vw;
+            }
+            div{
+                .form-btn{
+                    width: 30vw;
+                }
+            }
+        }
+    }
+    @include m.mobile{
+        h2{
+            text-align: center
+        }
+        section{
+            @include m.flex(column, nowrap, start, center, 20px);
+            order: 2;
+            iframe{
+                width: 90vw;
+                height: 40vh;
+            }
+        }
+        .form{
+            order: 1;
+            width: 80vw;
+            input, textarea{
+                width: 75vw;
+            }
+            div{
+                .form-btn{
+                    width: 30vw;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.main-us{
+    padding: 50px;
+    @include m.flex(column, nowrap, start, center, 0);
+    .about{
+        padding: 50px;
+        @extend %flex-row-center;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        .img-nos{
+            width: 50vw;
+            height: auto;
+            border-radius: 25px;
+            @include m.note{
+                width: 75vw;
+            }
+        }
+        p{
+            font-size: 1.25rem;
+        }
+    }
+    @include m.tablet{
+        padding: 40px;
+        .about{
+            .img-nos{
+                width: 75vw;
+            }
+        }
+    }
+    @include m.mobile{
+        padding: 25px;
+        .about{
+            .img-nos{
+                width: 75vw;
+            }
+        }
+    }
+}

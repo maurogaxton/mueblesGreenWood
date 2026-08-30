@@ -1,0 +1,69 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+.menu-main{
+    @include m.flex(column, nowrap, start, center, 0);
+    .menu{
+        @include m.flex(row, wrap, space-around, start, 50px);
+        padding: 20px;
+        .bxcard{
+            width: 25vw;
+            @include m.flex(column, nowrap, space-between, center, 15px);
+            padding: 20px;
+            text-align: center;
+            border: 2px solid v.$colorppal;
+            border-radius: 20px;
+            .card-img{
+                width: 20vw;
+                height: auto;
+                border-radius: 25px;
+            }
+                .buy-btn{
+                    color: v.$colorppal;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                    padding: 5px;
+                    border: 2px solid v.$colorppal;
+                    border-radius: 10px;
+                    @include m.flex(row, nowrap, start, center, 0);
+                    .buy{
+                        width: 3vw;
+                        height: auto;
+                    }
+                    .rev{
+                        transform: rotateY(180deg);
+                    }
+                }
+            }
+        }
+        @include m.note{
+            .menu{
+                .bxcard{
+                    width: 30vw;
+                    .card-img{
+                        width: 25vw;
+                    }
+                }
+            }
+        }
+        @include m.tablet{
+            .menu{
+                .bxcard{
+                    width: 45vw;
+                    .card-img{
+                        width: 40vw;
+                    }
+                }
+            }
+        }
+        @include m.mobile{
+            .menu{
+                .bxcard{
+                    width: 90vw;
+                    .card-img{
+                        width: 75vw;
+                    }
+                }
+            }
+        }
+    }

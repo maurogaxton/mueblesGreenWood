@@ -1,0 +1,14 @@
+// sass --watch sass/main.scss styles/style.css
+
+@use "utilities/reset";
+@use "utilities/variables";
+@use "utilities/mixins";
+
+@use "components/header";
+@use "components/footer";
+
+@use "pages/home";
+@use "pages/menu";
+@use "pages/galeria";
+@use "pages/nosotros";
+@use "pages/contacto";

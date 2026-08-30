@@ -1,0 +1,33 @@
+@mixin flex($fd, $fw, $jc, $ai, $g){
+    display: flex;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+}
+// NOTEBOOK
+@mixin note{
+    @media (min-width: 968px) and (max-width: 1400px){
+        @content;
+    }
+}
+// TABLET
+@mixin tablet{
+    @media (min-width: 568px) and (max-width: 967px) {
+        @content;
+    }
+}
+// MOBILE
+@mixin mobile{
+    @media (min-width: 300px) and (max-width: 567px){
+        @content;
+    }
+}
+// EXTENDS
+//  % = PLACEHOLDER
+%flex-row-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

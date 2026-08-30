@@ -1,0 +1,61 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+footer{
+    color: v.$colorppal;
+    @include m.flex(row, nowrap, space-evenly, center, 0);
+    padding: 0 100px;
+    .textoChicoCentro{
+        font-size: 1rem;
+        text-align: center;
+    }
+    nav{
+        ul{
+            @include m.flex(row, nowrap, start, start, 20px);
+            list-style: none;
+            li{
+                a{
+                    .rs{
+                        height: 6vh;
+                        width: auto;
+                    }
+                    .wa{
+                        position: fixed;
+                        right: 25px;
+                        bottom: 25px;
+                    }
+                }
+            }
+        }
+    }
+    @include m.tablet{
+        flex-wrap: wrap;
+        padding: 0 50px;
+        nav{
+            ul{
+                li{
+                    a{
+                        .rs{
+                            height: 5vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include m.mobile{
+        flex-wrap: wrap;
+        padding: 0 25px;
+        nav{
+            ul{
+                li{
+                    a{
+                        .rs{
+                            height: 5vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
