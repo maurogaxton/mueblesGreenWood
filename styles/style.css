@@ -55,7 +55,7 @@ header nav div div ul {
 }
 
 footer {
-  color: #FFD407;
+  color: #179045;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -446,4 +446,15 @@ footer nav ul li a .wa {
   .main-contacto .form div .form-btn {
     width: 30vw;
   }
+}
+.main-gal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  }
+.main-gal h2 {
+    text-align: center;
 }
