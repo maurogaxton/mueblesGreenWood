@@ -458,3 +458,22 @@ footer nav ul li a .wa {
 .main-gal h2 {
     text-align: center;
 }
+.main-sucursal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  }
+.main-sucursal h2 {
+    text-align: center;
+}
+.main-sucursal section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
